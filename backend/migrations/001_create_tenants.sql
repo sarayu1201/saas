@@ -2,7 +2,7 @@ CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 
 DO $$ BEGIN
     CREATE TYPE "enum_tenants_status" AS ENUM ('active', 'suspended');
-EXCEPTION
+EXCEPTION 
     WHEN duplicate_object THEN null;
 END $$;
 
